@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="js/bootstrap.bundle.min.js.js"></script>
+    <script src="js/jquery.min.js.js"></script>
+</head>
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <div class="card">
+                    <div class="row justify-content-end" id="heading">
+                        <h5 id="heading5" class="text-center mb-4">PERSONAL</h5>
+                        <div id="mar"></div>
+                    </div>
+                    <form class="form-card" onsubmit="event.preventDefault()">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Name:<span class="text-danger"> *</span></label>
+                                <input type="text" id="name" onblur="reqfun('req3')" placeholder="name surname"><span
+                                    class="req" id="req3"></span>
+                            </div>
+                        </div>
+                        <div class="text-left">
+                            <label class="form-control-label px-3">Gender:<span class="text-danger"> *</span></label>
+                            <input type="radio" id="male" name="gender" onblur="reqfun('req4')"><label for="male">
+                                &nbsp;Male &nbsp;</label>
+                            <input name="gender" type="radio" onblur="reqfun('req4')" id="female"><label for="female">
+                                &nbsp;Female</label><br>
+                            <span class="req" id="req4"></span>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Date of Birth:<span class="text-danger">
+                                        *</span></label>
+                                <input type="date" id="dob" onblur="reqfun('req9')"> <span class="req" id="req9"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Office:<span class="text-danger">
+                                        *</span></label>
+                                <textarea placeholder="Office Address" id="office" cols="1" onblur="reqfun('req5')"
+                                    rows="1"></textarea>
+                                <span class="req" id="req5"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Residence:<span class="text-danger">
+                                        *</span></label>
+                                <textarea placeholder="Residence Address" cols="1" id="residence"
+                                    onblur="reqfun('req6')" rows="1"></textarea>
+                                <span class="req" id="req6"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Postal:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req7')" id="postal" placeholder="Postal"><span
+                                    class="req" id="req7"></span>
+                                <span class="req" id="req7"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Mobile:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req8')" id="mobile" placeholder="Mobile"><span
+                                    class="req" id="req8"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Telephone:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req10')" id="telephone" placeholder="Telephone"><span
+                                    class="req" id="req10"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Email:<span class="text-danger"> *</span></label>
+                                <input type="text" onblur="reqfun('req11')" id="email" placeholder="email"><span
+                                    class="req" id="req11"></span>
+                            </div>
+                        </div>
+                        <div class="text-left">
+                            <label class="form-control-label px-3">Domain of Interest:<span class="text-danger">
+                                    *</span></label>
+                            <input type="checkbox" id="php">
+                            <label for="php">PHP &nbsp; </label>
+                            <input type="checkbox" id="golang">
+                            <label for="golang">Golang &nbsp; </label>
+                            <input type="checkbox" id="python">
+                            <label for="python">Python &nbsp; </label>
+                            <input type="checkbox" id="nodejs">
+                            <label for="nodejs">NodeJs &nbsp; </label>
+                            <input type="checkbox" id="react">
+                            <label for="react">React &nbsp; </label><br>
+                            <span class="req" id="req12"></span><br>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Dept. you are currently working in:<span
+                                        class="text-danger"> *</span></label>
+                                <input onblur="reqfun('req26')" class="input-text" list="dept" placeholder="select"
+                                    id="deptc">
+                                <datalist id="dept">
+                                    <option value="PHP">
+                                    <option value="golang">
+                                    <option value="react">
+                                    <option value="frontend">
+                                    <option value="MEAN">
+                                    <option value="MERN">
+                                    <option value="JAVA">
+                                    <option value="asp.net">
+                                    <option value="blockchain">
+                                    <option value="flutter">
+                                </datalist>
+                                <span class="req" id="req26"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Fav Color:<span class="text-danger">
+                                        *</span></label>
+                                <input type="color" class="colorinput" type="color" id="color"> <span class="req"
+                                    id="req33"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Skill in your domain:<span class="text-danger">
+                                        *</span> <span id="ranval" class="text-danger"> 51</span></label>
+                                <input type="range" onchange="funchange()" id="ran" min="1" max="100"> <span class="req"
+                                    id="req33"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Blood group:<span class="text-danger">
+                                        *</span></label>
+                                <select class="selectinput" name="blood" id="blood-group" onblur="reqfun('req15')">
+                                    <option value="-1">Select</option>
+                                    <option value="A+">A+</option>
+                                    <option value="B+">B+</option>
+                                    <option value="O+">O+</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB-">AB-</option>
+                                </select> <span class="req" id="req15"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Vehicle you use:<span class="text-danger">
+                                        *</span></label>
+                                <select class="selectinput" name="cars" id="vehicle" onblur="reqfun('req13')">
+                                    <option value="-1">Select</option>
+                                    <option value="Come by bus">by bus</option>
+                                    <option value="2-wheel">2-wheel</option>
+                                    <option value="4-wheel">4-wheel</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="req" id="req13"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Aadhar no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req14')" id="aadhar" placeholder="000000000000">
+                                <span class="req" id="req14"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">GSTIN:<span class="text-danger"> *</span></label>
+                                <input type="text" id="gstin" onblur="reqfun('req20')" placeholder="gstin"> <span
+                                    class="req" id="req20"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Vehicle no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req16')" id="vehicle-no" placeholder="GJ00AA8888">
+                                <span class="req" id="req16"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">DL no:<span class="text-danger"> *</span></label>
+                                <input type="text" id="dl" onblur="reqfun('req21')" placeholder="dl no"> <span
+                                    class="req" id="req21"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Bank acc with:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="bank-acc" onblur="reqfun('req17')" placeholder="Bank name">
+                                <span class="req" id="req17"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Acc no:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="account" onblur="reqfun('req22')" placeholder="Acc no"> <span
+                                    class="req" id="req22"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Debit card no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="debit" onblur="reqfun('req18')" placeholder="000000000000">
+                                <span class="req" id="req18"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Credit card no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="credit" onblur="reqfun('req23')" placeholder="000000000000">
+                                <span class="req" id="req23"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Passport no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="passport-no" onblur="reqfun('req19')" placeholder="000000000">
+                                <span class="req" id="req19"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">PAN no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="pan" onblur="reqfun('req24')" placeholder="0000000000"> <span
+                                    class="req" id="req24"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Profile<span class="text-danger">
+                                        *</span></label>
+                                <input type="file" id="fil" accept="image/*" onchange="funcimgpreview()" onblur="reqfun('req27')"> <span class="req"
+                                    id="req27"></span><img width="41%" id="imagepreview">
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <details>
+                                    <summary>Simform</summary>
+                                    <p>Best place to work certified since 2022</p>
+                                </details>
+                            </div>
+                        </div>
+                        <h5 id="redtext">IN CASE OF EMERGENCY PLEASE NOTIFY</h5>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Name:<span class="text-danger"> *</span></label>
+                                <input type="text" onblur="reqfun('req28')" id="name-relative" placeholder="Name">
+                                <span class="req" id="req28"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex">
+                                <label class="form-control-label px-3">Mobile:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req29')" id="mobile-relative" placeholder="Mobile">
+                                <span class="req" id="req29"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Telephone no.:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req30')" id="telephone-relative"
+                                    placeholder="Telephone"> <span class="req" id="req30"></span>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Relation:<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" onblur="reqfun('req31')" id="relation-relative"
+                                    placeholder="Relation"> <span class="req" id="req31"></span>
+                            </div>
+                        </div>
+                        <h5>IN CASE OF LOSS,PLEASE RETURN IT TO THE OWNER</h5>
+
+                        <div class="row justify-content-between">
+                            <div class="form-group col-sm-6"> <a onclick="return fun()" href="form.html"
+                                    class="btn-block btn-primary">SUBMIT</a> </div>
+                            <div class="form-group col-sm-6"> <a href="alldata.html" class="btn-block btn-primary">VIEW
+                                    ALL DATA</a> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/edit.js"></script>
+</body>
+</html>

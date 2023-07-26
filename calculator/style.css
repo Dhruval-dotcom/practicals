@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.input-t {
+  height: 147px;
+  border: none;
+  background: transparent;
+}
+
+.card {
+  background-color: #f3f3f3;
+  width: 489px;
+  padding-left: 3px;
+  margin-left: 35%;
+  margin-top: 7%;
+  padding-bottom: 3px;
+  height: 579px;
+  margin-bottom: 157px;
+}
+
+.innerm {
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 6px;
+  width: 94px;
+  height: 47px;
+  margin-right: -1px;
+  font-size: 22px;
+}
+
+.innerdeg:hover {
+  background-color: #e7cccc54;
+}
+
+.innerm:hover {
+  background-color: #e7cccc54;
+}
+
+.buttons {
+  position: absolute;
+  margin-top: 32px;
+  background-color: #f3f3f3;
+}
+
+.offwhite {
+  border: none;
+  font-size: 22px;
+  position: static;
+  z-index: 1;
+  width: 94px;
+  height: 47px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #dddbdb;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+}
+
+.offwhite:before {
+  content: "";
+  background: linear-gradient(45deg, #cfabab, #c2bbb5);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.offwhite:active {
+  color: #dddbdb;
+}
+
+.offwhite:active:after {
+  background: transparent;
+}
+
+.offwhite:hover:before {
+  opacity: 1;
+}
+
+.offwhite:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dddbdb;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.whitekey {
+  border: none;
+  font-size: 22px;
+  position: static;
+  z-index: 1;
+  width: 94px;
+  height: 47px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #dddbdb;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.whitekey:hover {
+  background-color: #f5f5f5;
+}
+
+.offwhite:hover {
+  background-color: rgba(233, 228, 228, 0.39);
+}
+
+.scroller {
+  background-color: #f3f3f3;
+  font-size: 22px;
+  display: block;
+  margin: 4px 0px;
+}
+
+.trigno img,
+.function img {
+  width: 20px;
+}
+
+.trigno {
+  margin-right: 14px;
+  margin-left: 4px;
+  position: absolute;
+}
+
+.trigno ul {
+  height: 200px;
+  overflow-y: scroll;
+  width: 160px;
+}
+
+.function ul {
+  width: 150px;
+}
+
+.trigno ul li {
+  background-color: white;
+  display: none;
+  position: relative;
+}
+
+.trigno ul li button {
+  font-size: 20px;
+  padding: auto;
+  border: none;
+  width: 100px;
+  height: 35px;
+  margin: 2px 25px;
+}
+
+.function ul li button {
+  font-size: 20px;
+  padding: auto;
+  border: none;
+  width: 100px;
+  height: 35px;
+  margin: 2px 20px;
+}
+
+.function {
+  position: absolute;
+  margin-left: 210px;
+}
+
+.trigno:hover ul li {
+  display: block;
+  z-index: 2;
+}
+
+.function ul li {
+  display: none;
+  background-color: white;
+  display: none;
+  position: relative;
+}
+
+.function:hover ul li {
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+
+.chevron {
+  width: 15px;
+}
+
+#equal {
+  background-color: #91c1e7;
+  border: none;
+  font-size: 22px;
+  position: static;
+  z-index: 1;
+  width: 94px;
+  height: 47px;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+}
+
+#equal:hover {
+  background-color: #6ab5f3;
+}
+
+#display1 {
+  text-align: right;
+  font-size: 30px;
+  margin-right: 10px;
+  padding-top: 20px;
+}
+
+#h1 {
+  text-align: right;
+  font-size: 40px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.backspace {
+  padding-top: 4px;
+}

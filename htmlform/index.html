@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="card">
+        <div id="heading">
+            <div id="personal">PERSONAL</div>
+            <div id="maron"></div>
+        </div>
+        <div id="Req">Required <span id="req2">*</span></div>
+
+        <form action="form.html" method="post" autocomplete="off">
+            <div class="feild">
+                <br>
+                <label for="name">Name <span id="req2">*</span>:</label>
+                <input placeholder="Name Surname" type="text" class="input-text" name="name" onblur="reqfun('req3')" id="name">
+                <span class="req" id="req3"></span>
+            </div>
+
+            Gender <span id="req2">*</span>:
+            <input type="radio" checked name="gender" id="male" onblur="reqfun('req4')">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" onblur="reqfun('req4')">
+            <label for="female">Female</label>
+            <span class="req" id="req4"></span>
+
+            <div class="feild">
+                <label for="">DOB:</label>
+                <input class="input-text" type="date" id="dob" onblur="reqfun('req9')">
+                <span class="req" id="req9"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Office <span id="req2">*</span>:</label>
+                <textarea class="input-text" placeholder="Office address" id="office" cols="4" onblur="reqfun('req5')"
+                    rows="4"></textarea>
+                <span class="req" id="req5"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Residence <span id="req2">*</span>:</label>
+                <textarea class="input-text" placeholder="residence address" id="residence" cols="4" onblur="reqfun('req6')"
+                    rows="4"></textarea>
+                    <span class="req" id="req6"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Postal Code<span id="req2">*</span>:</label>
+                <input placeholder="XXXXXX" class="input-text" type="text" onblur="reqfun('req7')"  id="postal">
+                <span class="req" id="req7"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Mobile <span id="req2">*</span>:</label>
+                <input type="text" placeholder="Enter in 10 digits" class="input-text" onblur="reqfun('req8')"  id="mobile">
+                <span class="req" id="req8"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Telephone:</label>
+                <input type="text" placeholder="xxxxxxxxxx" class="input-text"  onblur="reqfun('req10')" id="telephone">
+                <span class="req" id="req10"></span>
+            </div>
+
+            <div class="feild">
+                <label for="">Email ID <span id="req2">*</span>:</label>
+                <input type="text" placeholder="Email" class="input-text"  onblur="reqfun('req11')" id="email">
+                <span class="req" id="req11"></span>
+            </div>
+
+            <label for="">Domain of interest: &nbsp;&nbsp;</label>
+            <input type="checkbox"  id="php">
+            <label for="php">PHP &nbsp; </label>
+            <input type="checkbox"  id="golang">
+            <label for="golang">Golang &nbsp; </label>
+            <input type="checkbox"  id="python">
+            <label for="python">Python &nbsp; </label>
+            <input type="checkbox"  id="nodejs">
+            <label for="nodejs">NodeJs &nbsp; </label>
+            <input type="checkbox"  id="react">
+            <label for="react">React &nbsp; </label>
+            <span class="req" id="req12"></span>
+            <br><br>
+
+
+
+            <label for="">Dept. you are currently working in:</label>
+            <input class="input-text" list="dept"  placeholder="select" id="deptc">
+            <datalist id="dept">
+                <option value="PHP">
+                <option value="golang">
+                <option value="react">
+                <option value="frontend">
+                <option value="MEAN">
+                <option value="MERN">
+                <option value="JAVA">
+                <option value="asp.net">
+                <option value="blockchain">
+                <option value="flutter">
+            </datalist>
+            <br><br>
+            <div id="cardinside">
+                <div id="cardinside1">
+                    <label for="">favourite color</label>
+                    <input type="color" id="color">
+                    <br><br>
+                    <label for="blood">Blood Group: <span id="req2">*</span></label>
+                    <select style="background: transparent;border: none;" name="blood" id="blood-group" onblur="reqfun('req15')" >
+                        <option value="-1">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="O-">O-</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    <span class="req" id="req15"></span>
+                    
+                    <div class="feild">
+                        <label for="">Aadhar no. <span id="req2">*</span>:</label>
+                        <input type="text" placeholder="Enter 12 digit aadhar" class="input-text"  onblur="reqfun('req14')" id="aadhar">
+                        <span class="req" id="req14"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Vehicle No.:</label>
+                        <input type="text" placeholder="In GJ03BE3000 format" class="input-text"  onblur="reqfun('req16')"
+                            id="vehicle-no">
+                        <span class="req" id="req16"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Bank A/c With <span id="req2">*</span>:</label>
+                        <input type="text" placeholder="Bank name" class="input-text"  id="bank-acc" onblur="reqfun('req17')">
+                        <span class="req" id="req17"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Debit Card No.:</label>
+                        <input type="text" placeholder="debit card number" class="input-text"  id="debit"  onblur="reqfun('req18')">
+                        <span class="req" id="req18"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Passport No:</label>
+                        <input type="text" placeholder="passport no" class="input-text"  id="passport-no" onblur="reqfun('req19')">
+                        <span class="req" id="req19"></span>
+                    </div>
+                    <div class="feild">
+                        <label for="">profile</label>
+                        <input type="file" placeholder="passport no" class="input-text"  id="fil">
+                        <span class="req" id="req19"></span>
+                    </div>
+                </div>
+
+                <div id="cardinside2">
+                    <label for="">Skill in domain between 1 to 100 &nbsp; <span style="color: red;" id="ranval">51</span></label>
+                    <input type="range" id="ran" min="1" max="100" onclick="funchange()"><br><br>
+                    <label for="cars">Vehicle You use<span id="req2">*</span>:</label>
+                    <select style="background: transparent;border: none;" name="cars" id="vehicle" onblur="reqfun('req13')">
+                        <option value="-1">Select</option>
+                        <option value="Come by bus">by bus</option>
+                        <option value="2-wheel">2-wheel</option>
+                        <option value="4-wheel">4-wheel</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="req" id="req13"></span>
+
+                    <div class="feild">
+                        <label for="">GSTIN:</label>
+                        <input type="text" placeholder="gstin" class="input-text"  id="gstin" onblur="reqfun('req20')">
+                        <span class="req" id="req20"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">DL No.:</label>
+                        <input type="text" placeholder="DL no" class="input-text"  id="dl" onblur="reqfun('req21')">
+                        <span class="req" id="req21"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Account No. <span id="req2">*</span>:</label>
+                        <input type="text" placeholder="Acc no" class="input-text"  id="account" onblur="reqfun('req22')">
+                        <span class="req" id="req22"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">Credit Card No.:</label>
+                        <input type="text" placeholder="credit card number" class="input-text"  id="credit" onblur="reqfun('req23')">
+                        <span class="req" id="req23"></span>
+                    </div>
+
+                    <div class="feild">
+                        <label for="">PAN No.:</label>
+                        <input type="text" placeholder="PAN no" class="input-text"  id="pan" onblur="reqfun('req24')">
+                        <span class="req" id="req24"></span>
+                    </div>
+                    <details>
+                        <summary>Simform</summary>
+                        <p>Best place to work <br> certified since 2022</p>
+                      </details>
+                      
+                </div>
+            </div>
+            <br>
+
+            <div style="color: red;">IN CASE OF EMERGENCY PLEASE NOTIFY</div>
+            <div class="feild">
+                <label for="">Name:</label>
+                <input type="text" placeholder="name" class="input-text"  id="name-relative">
+            </div>
+
+            <div class="feild">
+                <label for="">Mobile:</label>
+                <input type="text" class="input-text" placeholder="mobile"  id="mobile-relative">
+                <span class="req" id="req25"></span>
+            </div>
+
+            <div style="display: flex;">
+                <div class="feild" id="cardinside11">
+                    <label for="">Telephone:</label>
+                    <input type="text" class="input-text" placeholder="telephone"  id="telephone-relative">
+                    <span class="req" id="req26"></span>
+                </div>
+
+                <div class="feild" id="cardinside22">
+                    <label for="">Relation:</label>
+                    <input type="text" class="input-text" placeholder="relation"  id="relation-relative">
+                </div>
+            </div>
+            <div id="footer">IN CASE OF LOSS,PLEASE RETURN IT TO THE OWNER</div>
+
+            <button onclick="return fun()" id="button-submit">Submit The Responses</button>
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+<script>
+</script>
+</html>

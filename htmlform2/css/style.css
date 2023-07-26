@@ -1,0 +1,135 @@
+body {
+  color: #000;
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.card {
+  padding: 30px 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: none;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.blue-text {
+  color: #00bcd4;
+}
+.form-control-label {
+  margin-bottom: 0;
+}
+input,
+textarea,
+button {
+  padding: 8px 15px;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 300;
+}
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid red;
+  outline-width: 0;
+  font-weight: 400;
+  border-radius: 4px;
+}
+.btn-block {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  height: 43px;
+  cursor: pointer;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+.btn-block:hover {
+  color: #fff;
+}
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+#heading5 {
+  background-color: #909090;
+  width: 124px;
+  margin-right: 6px;
+  padding: 7px 2px;
+}
+#mar {
+  background-color: #ab4753;
+  width: 38px;
+  height: 38px;
+}
+#heading {
+  display: flex;
+  position: relative;
+  margin-right: 6px;
+}
+.req {
+  font-size: 17px !important;
+  color: red;
+  margin-left: 16px;
+  display: none;
+}
+#redtext {
+  color: red;
+}
+.colorinput {
+  width: 100%;
+}
+.selectinput {
+  background: transparent;
+  border: none;
+  height: 40px;
+}
+.btn-change6 {
+  color: white;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  width: 120px;
+  background: lightseagreen;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 48%;
+  float: left;
+  border: 0px;
+  color: #fff;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  box-shadow: 0px 0 0 #31708f inset;
+}
+.btn-change6:hover {
+  box-shadow: 0 0 0 25px #31708f inset;
+  -webkit-transform: scale(1);
+  color: white;
+}
+.btn-link {
+  font-size: 17px;
+  font-weight: 400;
+  color: #007bff;
+  text-decoration: none;
+}
+#imagepreview {
+  border-radius: 50%;
+}

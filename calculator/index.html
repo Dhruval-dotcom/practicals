@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="input-t">
+            <div id="display-container">
+                <div id="display1"></div>
+            </div>
+            <div id="h1">0</div>
+        </div>
+        <div class="memory">
+            <button onclick='mem("mc");this.blur();' class="innerm">MC</button>
+            <button onclick='mem("mr");this.blur();' class="innerm">MR</button>
+            <button onclick='mem("mp");this.blur();' class="innerm">M+</button>
+            <button onclick='mem("mm");this.blur();' class="innerm">M-</button>
+            <button onclick='mem("ms");this.blur();' class="innerm">MS</button>
+        </div>
+        <div class="scroller">
+            <div class="trigno">
+                <img src="images/triangular-ruler_318-408362.webp"> Trignometory <img class="chevron"
+                    src="images/chevron-down-removebg-preview.png">
+                <ul>
+                    <li><button onclick='maths("sine");this.blur();'>sin(x)</button></li>
+                    <li><button onclick='maths("cosine");this.blur();'>cos(x)</button></li>
+                    <li><button onclick='maths("tangent");this.blur();'>tan(x)</button></li>
+                    <li><button onclick='maths("cot");this.blur();'>cot(x)</button></li>
+                    <li><button onclick='maths("cosec");this.blur();'>cosec(x)</button></li>
+                    <li><button onclick='maths("sec");this.blur();'>sec(x)</button></li>
+                    <li><button onclick='maths("asin");this.blur();'>asin(x)</button></li>
+                    <li><button onclick='maths("acos");this.blur();'>acos(x)</button></li>
+                    <li><button onclick='maths("atan");this.blur();'>atan(x)</button></li>
+                    <li><button onclick='maths("acot");this.blur();'>acot(x)</button></li>
+                    <li><button onclick='maths("acosec");this.blur();'>acosec(x)</button></li>
+                    <li><button onclick='maths("asec");this.blur();'>asec(x)</button></li>
+                </ul>
+            </div>
+            <div class="function">
+                <img src="images/106947.png"><i class="fa-sharp fa-regular fa-ruler-triangle"></i>function <img
+                    class="chevron" src="images/chevron-down-removebg-preview.png">
+                <ul style="height: 300px;overflow-y: scroll;">
+                    <li><button onclick='maths("cbrt");this.blur();'><sup>3</sup>√x</button></li>
+                    <li><button onclick='maths("floor");this.blur();'>floor(x)</button></li>
+                    <li><button onclick='maths("ceil");this.blur();'>ceil(x)</button></li>
+                    <li><button onclick='maths("round");this.blur();'>round(x)</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons">
+            <table>
+                <tr>
+                    <td><button onclick='operators("cube");this.blur();' class="offwhite">x<sup>3</sup></button></td>
+                    <td><button onclick='numb("3.14");this.blur();' class="offwhite">π</button></td>
+                    <td><button onclick='numb("2.718");this.blur();' class="offwhite">e</button></td>
+                    <td><button onclick='clearans();this.blur()' class="offwhite">C</button></td>
+                    <td><button onclick='bsp();this.blur();' class="offwhite backspace"><img src="images/backspace.png"
+                                height="25px"></button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='operators("sqr");this.blur();' class="offwhite">x<sup>2</sup></button></td>
+                    <td><button onclick='maths("recip");this.blur();' class="offwhite"><sup>1</sup>/x</button></td>
+                    <td><button onclick='maths("abs");this.blur();' class="offwhite">|x|</button></td>
+                    <td><button onclick='operators("e");this.blur();' class="offwhite">exp</button></td>
+                    <td><button onclick='operators("%");this.blur();' class="offwhite">mod</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='maths("sqrt");this.blur();' class="offwhite"><sup>2</sup>√x</button></td>
+                    <td><button onclick='digit("(");this.blur();' class="offwhite">(</button></td>
+                    <td><button onclick='digit(")");this.blur();' this.blur();' class="offwhite">)</button></td>
+                    <td><button onclick='factorial();this.blur();' class="offwhite">n!</button></td>
+                    <td><button onclick='operators("÷");this.blur();' class="offwhite">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='operators("pow");this.blur();' class="offwhite">x<sup>y</sup></button></td>
+                    <td><button onclick='digit("7");this.blur();' class="whitekey">7</button></td>
+                    <td><button onclick='digit("8");this.blur();' class="whitekey">8</button></td>
+                    <td><button onclick='digit("9");this.blur();' class="whitekey">9</button></td>
+                    <td><button onclick='operators("*");this.blur();' class="offwhite">&#215;</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='operators("tenpow");this.blur();' class="offwhite">10<sup>x</sup></button></td>
+                    <td><button onclick='digit("4");this.blur();' class="whitekey">4</button></td>
+                    <td><button onclick='digit("5");this.blur();' class="whitekey">5</button></td>
+                    <td><button onclick='digit("6");this.blur();' class="whitekey">6</button></td>
+                    <td><button onclick='operators("-");this.blur();' class="offwhite">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='maths("logten");this.blur();' class="offwhite">log</button></td>
+                    <td><button onclick='digit("1");this.blur();' class="whitekey">1</button></td>
+                    <td><button onclick='digit("2");this.blur();' class="whitekey">2</button></td>
+                    <td><button onclick='digit("3");this.blur();' class="whitekey">3</button></td>
+                    <td><button onclick='operators("+");this.blur();' class="offwhite">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick='maths("log");this.blur();' class="offwhite">ln</button></td>
+                    <td><button onclick='pm();this.blur();' class="whitekey"><sup>+</sup>/-</button></td>
+                    <td><button onclick='digit("0");this.blur();' class="whitekey">0</button></td>
+                    <td><button onclick='digit("dot");this.blur();' class="whitekey">.</button></td>
+                    <td><button id="equal" onclick='equal();this.blur();'>=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

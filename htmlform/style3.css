@@ -1,0 +1,142 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 28px;
+}
+#card{
+    background-color: #c2c1bd70;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 100px;
+    padding: 20px 50px;
+    margin-bottom: 100px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.589);
+}
+#Req{
+    color:red;
+}
+#req2{
+    color: red;
+}
+.req{
+    font-size: 17px !important;
+    color: red;
+    display: none;
+}
+label{
+    margin-bottom: 4px;
+}
+.input-text{
+    background: transparent;
+    width: 46rem;
+    height: 36px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.384);  
+}
+.input-text:focus{
+    outline: none;
+    border: 2px solid rgba(236, 74, 25, 0.61);
+    border-radius: 5px;
+}
+#personal{
+    background-color: #909090;
+    font-size:20px;
+    color: white;
+    font-weight: bolder;
+    width: 163px;
+    padding: 7px 20px;
+    margin-right: 6px;
+}
+#maron{
+    background-color: #ab4753;
+    width: 37px;
+    height: 37px;
+}
+#heading{
+    display: flex;
+    position: relative;
+    left: 37em;
+}
+.feild{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+@media screen and (max-width:1700px) {
+    #heading{
+        left:41%;
+    }
+}
+#cardinside{
+    display: flex;
+}
+
+#cardinside2{
+    margin-top: 54px;
+   position: relative;
+    left: 2rem;
+}
+#cardinside1 input{
+    width: 22rem;
+}
+#cardinside2 input{
+    width: 22rem;
+}
+
+#cardinside11 input{
+    width: 22rem;
+}
+#cardinside22 input{
+    
+    width: 22rem;
+}
+#cardinside22 {
+    margin-left: 6px;
+    position: relative;
+    left: 2rem;
+}
+#cardinside3{
+    position: relative;
+     left: 36%;
+ }
+
+@media screen and (max-width:1700px) {
+    #cardinside{
+        display: block;
+    }
+    #cardinside2{
+        
+         left: 0%;
+     }
+     #cardinside3{
+        
+        left: 0%;
+    }
+}
+#footer{
+    margin-bottom: 10px;
+}
+#button-submit{
+    border: none;
+    color: white;
+    background-color: blue;
+    padding: 7px 22px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 266px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+#button-submit:hover{
+    text-decoration: underline;
+    background-color: blueviolet;
+}
+textarea{
+    width: 40%;
+}
